@@ -5,18 +5,22 @@ let computerNumber = 0;
 let computerChoice = '';
 let playerScore = 0;
 let computerScore = 0;
-let playerChose = prompt("Rock, Paper, or Scissors");
+let playerChose = '';//prompt("Rock, Paper, or Scissors");
 playerChose = playerChose.toLowerCase();
-console.log(playerChose);
+//console.log(playerChose);
 let winner = ''
 
+function getPlayerChoice() { // this function gets the player choice.
+    return playerChose = prompt("Rock, Paper, or Scissors");
+}
+//getPlayerChoice();
 
 function getRandomNumber() { //This function creates a random number between 1 and 3
     computerNumber = Math.floor(Math.random()*maxNumber) + 1;
 }
 
-getRandomNumber();
-console.log(computerNumber);
+//getRandomNumber();
+//console.log(computerNumber);
 
 function getComputerChoice() { // This function determines what the computer choses based by the random number. 
     
@@ -29,8 +33,8 @@ function getComputerChoice() { // This function determines what the computer cho
     }
 }
 
-getComputerChoice()
-console.log(computerChoice)
+//getComputerChoice()
+//console.log(computerChoice)
 
 
 function playRound(playerChose, computerChoice) { // this function plays the game. compares the choices and determines a winner.
@@ -53,9 +57,23 @@ function playRound(playerChose, computerChoice) { // this function plays the gam
     }
 }
 playRound(playerChose,computerChoice)
-console.log(winner)
+//console.log(winner)
 
 
-for (let i = 0; i < 5; i++) {
-
+function game() { // This function plays five rounds Rock paper scissors.
+    for (let i = 0; i < 5; i++) {
+    getRandomNumber();
+    getComputerChoice();
+    getPlayerChoice();
+    playRound(playerChose,computerChoice);
+    if (winner === "You Win!") {
+        playerScore++;
+    } else if (winner === "You Lose!" || winner === "You forfeit!") {
+        computerScore++;
+    }
+    console.log(winner);
 }
+}
+game()
+console.log(`The computer score is ${computerScore}.`);
+console.log(`The players score is ${playerScore}.`);
