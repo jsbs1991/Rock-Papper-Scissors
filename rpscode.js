@@ -56,7 +56,7 @@ function playRound(playerChose, computerChoice) { // this function plays the gam
         winner = "You forfeit!"
     }
 }
-playRound(playerChose,computerChoice)
+//playRound(playerChose,computerChoice)
 //console.log(winner)
 
 
