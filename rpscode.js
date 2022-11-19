@@ -54,3 +54,8 @@ function playRound(playerChose, computerChoice) { // this function plays the gam
 }
 playRound(playerChose,computerChoice)
 console.log(winner)
+
+
+for (let i = 0; i < 5; i++) {
+
+}
