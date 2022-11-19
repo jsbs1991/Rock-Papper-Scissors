@@ -10,10 +10,12 @@ playerChose = playerChose.toLowerCase();
 //console.log(playerChose);
 let winner = ''
 
+
 function getPlayerChoice() { // this function gets the player choice.
     return playerChose = prompt("Rock, Paper, or Scissors");
 }
 //getPlayerChoice();
+
 
 function getRandomNumber() { //This function creates a random number between 1 and 3
     computerNumber = Math.floor(Math.random()*maxNumber) + 1;
@@ -21,6 +23,7 @@ function getRandomNumber() { //This function creates a random number between 1 a
 
 //getRandomNumber();
 //console.log(computerNumber);
+
 
 function getComputerChoice() { // This function determines what the computer choses based by the random number. 
     
